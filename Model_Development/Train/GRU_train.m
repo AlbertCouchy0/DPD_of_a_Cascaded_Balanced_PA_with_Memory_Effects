@@ -27,8 +27,8 @@ options = trainingOptions('adam', ...
     'InitialLearnRate', 0.003, ...                      % 初始学习率
     'GradientThreshold', 1, ...                         % 梯度裁剪阈值，防止梯度爆炸
     'ValidationData', {X_Validation, Y_Validation}, ... % 验证数据集，用于监控模型泛化性能。
-    'ValidationFrequency', 50, ...                     % 验证频率
-    'ValidationPatience',5,...                          % 若验证损失连续 10 次未改善，则提前停止训练。
+    'ValidationFrequency', 50, ...                      % 验证频率
+    'ValidationPatience',5,...                          % 若验证损失连续 5 次未改善，则提前停止训练。
     'Shuffle', 'every-epoch', ...                       % 是否打乱数据顺序
     'Plots', 'training-progress', ...                   % 实时绘制训练损失和验证损失曲线
     'ExecutionEnvironment', 'multi-gpu', ...            % 训练环境

@@ -11,7 +11,7 @@ Y = [x_i(M + 1 : end)'; x_q(M + 1 : end)'];
 % 更多细节可见：https://ww2.mathworks.cn/help/deeplearning/ref/trainingoptions.html
 layers = [
     sequenceInputLayer(2*(M + 1),"Name","input")
-    lstmLayer(128,"Name","lstm")
+    lstmLayer(128,"Name","lstm",'OutputMode', 'sequence')
     fullyConnectedLayer(32,"Name","fc_1")
     fullyConnectedLayer(16,"Name","fc_2")
     fullyConnectedLayer(2,"Name","fc_3")
